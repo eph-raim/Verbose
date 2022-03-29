@@ -1,0 +1,152 @@
+#Verbose/Microprocessor
+Introduction:
+
+Microprocessor is an electronic device which can perform arithmetic/logical functions. Micro indicates the physical size of the component. Microprocessor is a VLSI (very large scale integration) device that contains thousands of gates in a single chip. It constitutes the heart of microcomputers and it fetches microinstructions from memory, decodes the instruction into a series of actions and Carries out these actions in a sequence of steps. Microprocessor is usually enclosed in one integrated circuit (IC) package called a “microprocessor chip”. The microprocessor and associated support chips like memory,   I/O make up the central processing Unit. The CPU forms the nerve centre of any digital computer since it coordinates and controls the activities of all peripheral units and performs all the calculations.
+
+#Note: For the block diagram of microcomputers refer to your note in class.
+
+Applications of microprocessor
+
+There are three types of microprocessor depending on the usage.
+
+General or all purpose microprocessor: it is capable of executing various instructions and can be instructed as to what specific sequence of operations it must perform.
+
+Embedded or dedicated microprocessor: these are special purpose microprocessors. The sequence of operations is fixed and the computer performs the same specific task over and over again. They are basically known as microcontrollers.
+
+Advantages of using embedded systems
+
+The logic device can be condensed into single integrated circuit
+
+It greatly improves reliability
+
+The program can be changed or modified for better usage without rewiring the circuit.
+
+Note: one of the greatest applications of embedded systems today is in the automotive industry.
+
+Peripheral control microprocessor: are basically attached to the main processor to ease the main microprocessor from certain duties hence improving the speed of the system and saving time as well. Such devices include Network interface card, video graphics card etc
+
+Classification of computer systems
+
+Computers are classified according to their processing speed. It does not only depend on hardware characteristics of the system  but also on the efficiency of its software components. The time required to perform operations is called the “processing speed “.
+
+Some hardware characteristics of importance in achieving high processing speed includes
+
+Word length/size: the number of bits by the computer as a unit. It ranges from 4bit to 64bits in modern computers. A 16bits word will be able to hold numbers in the range from -2¹⁵ through +2¹⁵-1. The number of different types of instructions is directly related to the word length/size. In conclusion the larger the word length, the greater the processing speed.
+
+Data path size: this depends on the internal CPU bus width. Wider data paths speeds up CPU operations,  since more information is transmitted in a single transfer.
+
+Other Important hardware functions are logic family, overlapping of CPU instructions, memory bandwidth, I/O bandwidth.
+
+Fundamental steps of a microprocessor cycle.
+
+Execution of instructions start from the program counter (PC) which contains the address of the instruction and ends with the placement of the results in the appropriate location. The sequence steps during execution of instructions includes
+
+Fetch instruction: instruction cycle begins with Op-code
+
+Determined Oprands: required to execute instructions.
+
+Execute instructions: control signals from the control unit, activates the operations.
+
+Store the results: store results in the specific location and the cycle ends.
+
+Note: Oprands is a term used to describe any object that is capable of being manipulated.
+
+CPU Architecture
+
+Architecture in relation to microprocessors refers to the internal design and organisation of the device. Every microprocessor does basically two things repeatedly which are fetching and execution of data.
+
+Fetch and execute principle simply involves the process of reading memory, implementing the IP and decoding the instructions. The processing speed of a microprocessor can be improved by increasing the frequency of the clock or employing pipelining techniques.
+
+Pipelining techniques simply overlap fetch and execute cycles simultaneously.
+
+Bus interface unit (BIU): fetches instructions, calculates addresses, fetches Oprands and write results in the memory as requested by the Execution unit. BIu fills any vacancies created in the instruction queue (IQ) in it's free state.
+
+Execution unit (EU): receives program instructions from BIU, executes the instructions and stores results in general registers. At the completion of the execution, EU passes to the BIU any result meant to be stored in memory or I/O before proceeding to the next instruction. The EU is dependent on BIU for its operations and communications to the outside world.
+
+The BIU uses the principles of first-in-frst-out (FIFO) to store data in the buffer called instruction queue (IQ). This principle brings about pipelining. The major advantage of pipelining is that the EU can execute instructions almost continually instead of having to wait for BIU to fetch new instructions.
+
+Condition that can make EU to enter into wait mode are;
+
+When an instruction requires access to memory location not in the queue.
+
+When the instruction to be executed is a branch/jump instruction. In this case control is to be transferred to a new non-sequential address.
+
+During execution of instructions that are slow to execute. This can cause BIU to suspend fetching instructions.
+
+The main parts of BIU are;
+
+The instruction queue
+
+The register array
+
+An adder
+
+A control section
+
+The main parts of EU are;
+
+The register array
+
+The main ALU
+
+A flag register
+
+A control section.
+
+CPU Organisation
+
+The basic principles of operation of a microprocessor are similar to those of microcomputers. The basic organisation of a microprocessor consists of three main sections which includes.
+
+Arithmetic Logic Unit (ALU)
+
+Control Unit (CU)
+
+Registers.
+
+Arithmetic logic Unit (ALU):
+
+ALU is a multi operation, combinational logic digital function. To perform a micro operation, the control routes the source information from registers into the input of the ALU.  ALU receives information from the register and performs a given operation as specified by the control. The result is transferred to the designated register. In some microprocessors, the results are placed in a specific register called accumulator or accumulator register.
+
+2. Control unit (CU):
+
+controls operation of all units of the computer by telling the rest of the computer system how to carry out program instructions. The CU generates two types of signal;
+
+Internal activation of the ALU and the opening and closing of data paths between registers.
+
+External control signals for memory and the I/O. These are sent either for activation of data transfer or as response to interrupt or bus request.
+
+Often CU of microprocessors employ ‘micro-coding’ or micro instruction which directly controls the functioning of hardware independently of operating system or application software.  A sequence of micro instructions is called a micro program which are basically stored within the CU of a microprocessor, normally created by the designer of the microprocessor and can not be altered by the user.
+
+3. Registers
+
+Registers are special storage locations generally having a capacity equivalent to the word size of the computer concerned and having specific properties for use during arithmetic and/or logic operations. Registers in computers are classified as either operational or storage type.
+
+Operational register is capable of storing binary information in its flip-flops and in addition has combinational gates capable of data processing tasks.
+
+Storage registers are used solely for temporary storage of binary information. Bulk of registers in digital computers are storage registers.
+
+Some special kinds registers includes;
+
+Program counter (PC): stores address of the next instruction to be performed. It is incremented every time a new instruction is fetched. Always pointing to the location of the next instruction.
+
+Instruction register (IR): holds address of current instruction. Program instructions consist of two parts; OP-code and address field. The IR extracts only the OP-code part from the data buffer.
+
+Buffer register: holds address, data and isolate the external data buses of the CPU from its internal buses.
+
+Status register: stores the program status word consisting status and control bits, which contain information about the condition of a peripheral unit.
+
+Stack pointer: holds the addresses of the instruction.
+
+Communication path in CPU
+
+A channel along which signals travel from one of the several sources to one of several destinations is called Bus or trunk.
+
+There are three types of buses.
+
+Address Bus: this is a one way road over which the microprocessor sends an address to memory or other external devices. The size/width of the address bus is specified by the number of bits it can handle. Following the advancement of technology, the number of bits a microprocessor can accommodate has increased from 4bits previously to 8,16,32,64 bits. The number of address lines determines the number of memory location lines that can be addressed. If a CPU has N address line, then it can directly address 2^N memory locations. The lowest address is 0 and the highest is 2^N-1. Each memory location contains 1byte =8bits of data.
+
+Data Bus: as indicated by double ended arrows is a double way road or bi-directional ie the CPU can read in from memory or O/I device or it can write data to memory or O/I device. A bi-directional data bus is used to save pins in the IC package.  The width of the data bus in bits is usually used to categorize the microprocessor as it determines how much data the microprocessor can read or write in one memory cycle or O/I cycle.
+
+Control Bus: each time the CPU outputs an address it also activates one of four control bus signals: memory read, memory write, I/O read or write. The control bus identifies the direction of data flow on the data bus. The control bus coordinates CPU operations when memory read or I/O read is active, data is input to the CPU. when memory write or I/O write is active is output by the CPU.
+
+CPU manages the flow of data between itself, memory and I/O ports via the address, data and control buses. The control and address buses are output lines only (uni-directional) but the data bus is bi-directional. This three bus architecture is commonly present in all microcomputer systems.
