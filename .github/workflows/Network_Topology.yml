@@ -1,0 +1,139 @@
+# This is a basic workflow to help you get started with Actions
+
+name: CI
+
+# Controls when the workflow will run
+on:
+  # Triggers the workflow on push or pull request events but only for the main branch
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
+
+# A workflow run is made up of one or more jobs that can run sequentially or in parallel
+jobs:
+  # This workflow contains a single job called "build"
+  build:
+    # The type of runner that the job will run on
+    runs-on: ubuntu-latest
+
+    # Steps represent a sequence of tasks that will be executed as part of the job
+    steps:
+      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
+      - uses: actions/checkout@v3
+
+      # Runs a single command using the runners shell
+      - name: Run a one-line script
+        run: echo Hello, world!
+
+      # Runs a set of commands using the runners shell
+      - name: Run a multi-line script
+        run: |
+          echo Add other actions to build,
+          echo test, and deploy your project. 
+          
+          #Network_Topology.yml
+          - Network topology is the topological structure of a network and may be depicted physically or logically. It is an application of graph theory wherein communicating devices are modeled as nodes and the connections between the devices are modeled as links or lines between the nodes.
+          
+        #Network topology is the arrangement of the elements (links, nodes, etc.) of a communication network.[1][2] Network topology can be used to define or describe the arrangement of various types of telecommunication networks, including command and control radio networks,[3] industrial fieldbusses and computer networks.
+
+Network topology is the topological[4] structure of a network and may be depicted physically or logically. It is an application of graph theory[3] wherein communicating devices are modeled as nodes and the connections between the devices are modeled as links or lines between the nodes. Physical topology is the placement of the various components of a network (e.g., device location and cable installation), while logical topology illustrates how data flows within a network. Distances between nodes, physical interconnections, transmission rates, or signal types may differ between two different networks, yet their logical topologies may be identical. A network’s physical topology is a particular concern of the physical layer of the OSI model.
+
+Examples of network topologies are found in local area networks (LAN), a common computer network installation. Any given node in the LAN has one or more physical links to other devices in the network; graphically mapping these links results in a geometric shape that can be used to describe the physical topology of the network. A wide variety of physical topologies have been used in LANs, including ring, bus, mesh and star. Conversely, mapping the data flow between the components determines the logical topology of the network. In comparison, Controller Area Networks, common in vehicles, are primarily distributed control system networks of one or more controllers interconnected with sensors and actuators over, invariably, a physical bus topology.
+
+#
+<>Classification	Edit
+
+The study of network topology recognizes eight basic topologies: point-to-point, bus, star, ring or circular, mesh, tree, hybrid, or daisy chain.[18]
+
+Point-to-point	Edit
+
+Main article: Point-to-point (telecommunications)
+
+The simplest topology with a dedicated link between two endpoints. Easiest to understand, of the variations of point-to-point topology, is a point-to-point communication channel that appears, to the user, to be permanently associated with the two endpoints. A child's tin can telephone is one example of a physical dedicated channel.
+
+Using circuit-switching or packet-switching technologies, a point-to-point circuit can be set up dynamically and dropped when no longer needed. Switched point-to-point topologies are the basic model of conventional telephony.
+
+The value of a permanent point-to-point network is unimpeded communications between the two endpoints. The value of an on-demand point-to-point connection is proportional to the number of potential pairs of subscribers and has been expressed as Metcalfe's Law.
+
+Daisy chain	Edit
+
+Daisy chaining is accomplished by connecting each computer in series to the next. If a message is intended for a computer partway down the line, each system bounces it along in sequence until it reaches the destination. A daisy-chained network can take two basic forms: linear and ring.
+
+A linear topology puts a two-way link between one computer and the next. However, this was expensive in the early days of computing, since each computer (except for the ones at each end) required two receivers and two transmitters.
+
+By connecting the computers at each end of the chain, a ring topology can be formed. When a node sends a message, the message is processed by each computer in the ring. An advantage of the ring is that the number of transmitters and receivers can be cut in half. Since a message will eventually loop all of the way around, transmission does not need to go both directions. Alternatively, the ring can be used to improve fault tolerance. If the ring breaks at a particular link then the transmission can be sent via the reverse path thereby ensuring that all nodes are always connected in the case of a single failure.
+
+-[]- Bus Network
+In local area networks using bus topology, each node is connected by interface connectors to a single central cable. This is the 'bus', also referred to as the backbone, or trunk – all data transmission between nodes in the network is transmitted over this common transmission medium and is able to be received by all nodes in the network simultaneously.[1]
+
+A signal containing the address of the intended receiving machine travels from a source machine in both directions to all machines connected to the bus until it finds the intended recipient, which then accepts the data. If the machine address does not match the intended address for the data, the data portion of the signal is ignored. Since the bus topology consists of only one wire it is less expensive to implement than other topologies, but the savings are offset by the higher cost of managing the network. Additionally, since the network is dependent on the single cable, it can be the single point of failure of the network. In this topology data being transferred may be accessed by any node.
+
+Linear bus	Edit
+
+In a linear bus network, all of the nodes of the network are connected to a common transmission medium which has just two endpoints. When the electrical signal reaches the end of the bus, the signal is reflected back down the line, causing unwanted interference. To prevent this, the two endpoints of the bus are normally terminated with a device called a terminator.
+
+Distributed bus	Edit
+
+In a distributed bus network, all of the nodes of the network are connected to a common transmission medium with more than two endpoints, created by adding branches to the main section of the transmission medium – the physical distributed bus topology functions in exactly the same fashion as the physical linear bus topology because all nodes share a common transmission medium.
+
+Star	Edit
+
+Main article: Star network
+
+Star network topology
+
+In star topology, every peripheral node (computer workstation or any other peripheral) is connected to a central node called a hub or switch. The hub is the server and the peripherals are the clients. The network does not necessarily have to resemble a star to be classified as a star network, but all of the peripheral nodes on the network must be connected to one central hub. All traffic that traverses the network passes through the central hub, which acts as a signal repeater.
+
+The star topology is considered the easiest topology to design and implement. One advantage of the star topology is the simplicity of adding additional nodes. The primary disadvantage of the star topology is that the hub represents a single point of failure. Also, since all peripheral communication must flow through the central hub, the aggregate central bandwidth forms a network bottleneck for large clusters.
+
+Extended star	Edit
+
+The extended star network topology extends a physical star topology by one or more repeaters between the central node and the peripheral (or 'spoke') nodes. The repeaters are used to extend the maximum transmission distance of the physical layer, the point-to-point distance between the central node and the peripheral nodes. Repeaters allow greater transmission distance, further than would be possible using just the transmitting power of the central node. The use of repeaters can also overcome limitations from the standard upon which the physical layer is based.
+
+A physical extended star topology in which repeaters are replaced with hubs or switches is a type of hybrid network topology and is referred to as a physical hierarchical star topology, although some texts make no distinction between the two topologies.
+
+A physical hierarchical star topology can also be referred as a tier-star topology, this topology differs from a tree topology in the way star networks are connected together. A tier-star topology uses a central node, while a tree topology uses a central bus and can also be referred as a star-bus network.
+
+Distributed star	Edit
+
+A distributed star is a network topology that is composed of individual networks that are based upon the physical star topology connected in a linear fashion – i.e., 'daisy-chained' – with no central or top level connection point (e.g., two or more 'stacked' hubs, along with their associated star connected nodes or 'spokes').
+
+Ring	Edit
+
+Main article: Ring network
+
+Ring network topology
+
+A ring topology is a daisy chain in a closed loop. Data travels around the ring in one direction. When one node sends data to another, the data passes through each intermediate node on the ring until it reaches its destination. The intermediate nodes repeat (re transmit) the data to keep the signal strong.[5] Every node is a peer; there is no hierarchical relationship of clients and servers. If one node is unable to re transmit data, it severs communication between the nodes before and after it in the bus.
+
+Advantages:
+
+When the load on the network increases, its performance is better than bus topology.
+
+There is no need of network server to control the connectivity between workstations.
+
+Disadvantages:
+
+Aggregate network bandwidth is bottlenecked by the weakest link between two nodes.
+
+Mesh	Edit
+
+Main article: Mesh networking
+
+The value of fully meshed networks is proportional to the exponent of the number of subscribers, assuming that communicating groups of any two endpoints, up to and including all the endpoints, is approximated by Reed's Law.
+
+Fully connected network	Edit 
+
+In a fully connected network, all nodes are interconnected. (In graph theory this is called a complete graph.) The simplest fully connected network is a two-node network. A fully connected network doesn't need to use packet switching or broadcasting. However, since the number of connections grows quadratically with the number of nodes:
+
+{\displaystyle c={\frac {n(n-1)}{2}}.\,}{\displaystyle c={\frac {n(n-1)}{2}}.\,}
+
+This makes it impractical for large networks. This kind of topology does not trip and affect other nodes in the network.
+
+Partially connected network	Edit
+          
+          
